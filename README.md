@@ -1,5 +1,5 @@
-<pre><center>PAXER (PAth fiXER) V0.1-poc
-===========================</center>
+<pre>PAXER (PAth fiXER) V0.1-poc
+===========================
 PAXER is a Unix utility to clean-up the $PATH variables from issues
 that affects the performance of the shell you are using, while applying
 to the current session.
