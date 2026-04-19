@@ -1,4 +1,4 @@
-<pre>PAXER (PAth fiXER) V0.1-poc
+<pre>PAXER (PAth fiXER) V0.2-poc
 ===========================
 PAXER is a Unix utility to clean-up the $PATH variables from issues
 that affects the performance of the shell you are using, while applying
@@ -28,6 +28,10 @@ INSTALLATION
 
     Example for bash/zsh shells:
     source ~/.local/bin/paxer-setup.sh
+
+    Note: The shell script does infact support the plain broune shell,
+    use this command instead when putting it in the RC file:
+    . ~/.local/bin/paxer-setup.sh
 
 CAUTION: Ensure all files are put along to prevent errors
 
