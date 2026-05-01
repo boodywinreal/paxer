@@ -40,7 +40,7 @@ def main():
             errorCount += 1
             continue
 
-        normPath = Path(path).expanduser().absolute()
+        normPath = Path(path).expanduser().resolve()
         normStringPath = str(normPath)
 
         if normStringPath in dupCheckSet:
@@ -50,7 +50,7 @@ def main():
         dupCheckSet.add(normStringPath)
 
         if normPath.is_symlink():
-            realPath = normPath.readlink().resolve()
+            realPath = normPath.readlink()
             realStringPath = str(realPath)
 
             if realStringPath == ".":
@@ -58,7 +58,7 @@ def main():
                 errorCount += 1
                 continue
 
-            realPath = realPath.expanduser().absolute()
+            realPath = realPath.expanduser().resolve()
             realStringPath = str(realPath)
 
             if realPath in dupCheckSet:
