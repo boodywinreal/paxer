@@ -28,7 +28,7 @@ onPathUnusable = lambda message: silent(message, "WARNING")
 normalError = lambda message: verbose(message, "ERROR")
 normalLog = lambda message: verbose(message, "LOG")
 
-def setup():
+def setupLogger():
     global normalError, normalLog, onPathUnusable
     if logLevel < 1:
         normalError = lambda message: silent(message, outType="ERROR")
