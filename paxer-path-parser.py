@@ -2,10 +2,19 @@ from sys import stderr, stdout
 from pathlib import Path
 from os import getenv
 from const import *
+import argparse
 
 __version__ = VERSION
 
-logLevel = 1
+def HandleArguments():
+    parser = argparse.ArgumentParser(
+        prog="PAXER (PAth fiXER)",
+    )
+    parser.add_argument("--path", "-p", default=getenv("PATH"))
+    parser.add_argument("--verbose", "-v", action="store_true")
+    parser.add_argument("--silent", "-silent", action="store_true")
+    return parser.parse_args()
+
 
 def main(pathRaw: str):
     pathList = pathRaw.split(":")
