@@ -6,6 +6,8 @@ from os import stat
 
 logLevel = 1
 loggerFile = Path(LOG).expanduser().absolute() / "log.txt"
+loggerFile.parent.mkdir(parents=True, exist_ok=True)
+loggerFile.touch()
 
 if loggerFile.exists() and stat(loggerFile).st_size > MAX_LOG_SIZE:
     backup = loggerFile.with_suffix(loggerFile.suffix + ".bak")
@@ -14,24 +16,24 @@ if loggerFile.exists() and stat(loggerFile).st_size > MAX_LOG_SIZE:
 stream = open(loggerFile, "a")
 
 def silent(message: str, outType: str):
-    stream.write(f"\n[{outType}][ {datetime.now()} ] {message}")
+    stream.write(f"[{outType}][ {datetime.now()} ] {message}\n")
     stream.flush()
 
 def verbose(message: str, outType: str):
-    trueMessage = f"\n[{outType}][ {datetime.now()} ] {message}"
-    stderr.write(trueMessage)
+    trueMessage = f"[{outType}]{{time}} {message}\n"
+    stderr.write(trueMessage.format(time=""))
     stderr.flush()
-    stream.write(trueMessage)
+    stream.write(trueMessage.format(time=f"[ {datetime.now()} ]"))
     stream.flush()
 
-onPathUnusable = lambda message: silent(message, "WARNING")
-normalError = lambda message: verbose(message, "ERROR")
-normalLog = lambda message: verbose(message, "LOG")
+pathUnusableError = lambda message: silent(message, "WARNING")
+normalError = lambda message: verbose(message, " ERROR ")
+normalLog = lambda message: verbose(message, "  LOG  ")
 
 def setupLogger():
-    global normalError, normalLog, onPathUnusable
+    global normalError, normalLog, pathUnusableError
     if logLevel < 1:
         normalError = lambda message: silent(message, outType="ERROR")
         normalLog = lambda message: silent(message, outType="LOG")
     elif logLevel > 1:
-        onPathUnusable = lambda message: verbose(message, "WARNING")
+        pathUnusableError = lambda message: verbose(message, "WARNING")
