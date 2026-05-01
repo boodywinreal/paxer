@@ -3,7 +3,7 @@ from pathlib import Path
 from os import getenv
 from const import *
 
-__version__ = "0.2-poc"
+__version__ = VERSION
 
 logLevel = 1
 
