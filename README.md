@@ -22,26 +22,6 @@ WHAT DOES IT HANDLE
 * Dangerous paths (e.g. ".", " ")
 * System-reserved directories (e.g. /dev, /etc)
 
-INSTALLATION
-------------
-
-1. Python3 must be installed (python.org).
-
-2. Move the files in your path
-    - System Wide: /usr/local/bin/
-    - User Specific: ~/.local/bin/
-
-3. REQUIRED: Source the included .sh file in your shell's RC file
-
-    Example for bash/zsh shells:
-    source ~/.local/bin/paxer-setup.sh
-
-    Note: The shell script does infact support the plain broune shell,
-    use this command instead when putting it in the RC file:
-    . ~/.local/bin/paxer-setup.sh
-
-CAUTION: Ensure all files are put along to prevent errors
-
 WHAT IS NEXT
 ------------
 
