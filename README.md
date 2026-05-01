@@ -1,4 +1,4 @@
-<pre>PAXER (PAth fiXER) V0.3-py
+<pre>PAXER (PAth fiXER) V1.0-py
 ===========================
 PAXER is a Unix utility to clean-up the $PATH variables from issues
 that affects the performance of the shell you are using, while applying
