@@ -1,11 +1,18 @@
-<pre>PAXER (PAth fiXER) V0.2-poc
+<pre>PAXER (PAth fiXER) V0.3-py
 ===========================
 PAXER is a Unix utility to clean-up the $PATH variables from issues
 that affects the performance of the shell you are using, while applying
 to the current session.
 
-WARNING: PAXER in this state is still a Proof Of Concept (POC),
-expect instabiliy or slowness, issue reporting is recommended.
+!! WHAT IS NEW !!
+-----------------
+1. Added argument parsing
+2. Added a better logging system
+3. More support over symlinks
+4. Optimization tweaks
+5. Error counting for normal mode
+
+Alongside, I'll start working on compiling the python code (Used tool: Nuitka).
 
 WHAT DOES IT HANDLE
 -------------------
@@ -38,5 +45,4 @@ CAUTION: Ensure all files are put along to prevent errors
 WHAT IS NEXT
 ------------
 
-* Moving to C: For a maximum performance and zero overhead.
-* User Customizability: Adding flags to toggle specific settings.</pre>
+* Moving to C: For a maximum performance and zero overhead.</pre>
