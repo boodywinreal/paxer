@@ -4,9 +4,13 @@ PAXER is a Unix utility to clean-up the $PATH variables from issues
 that affects the performance of the shell you are using, while applying
 to the current session.
 
-WARNING: PAXER in this state is still a Proof Of Concept (POC),
-expect instabiliy or slowness, issue reporting is recommended.
-
+!! NEW !!: PAXER 1.0-py is here.
+See the newer code by switching
+to the 'incoming-1.0-py' branch.
+Note: this only contains the newer
+logic, the shell script has not
+been worked on, yet.
+    
 WHAT DOES IT HANDLE
 -------------------
 
