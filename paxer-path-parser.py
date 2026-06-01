@@ -34,6 +34,7 @@ def main():
 
     if data.path is None:
         pxl.normalError("Path is None")
+        print(getenv("PATH"))
         return
     
     pathList = data.path.split(":")
