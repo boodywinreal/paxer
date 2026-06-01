@@ -1,8 +1,8 @@
 <pre>PAXER (PAth fiXER) V1.0-py
 ===========================
-PAXER is a Unix utility to clean-up the $PATH variables from issues
-that affects the performance of the shell you are using, while applying
-to the current session.
+PAXER is a Unix utility to clean-up the $PATH variables from
+issues that affects the performance of the shell you are using,
+while applying to the current session.
 
 !! WHAT IS NEW !!
 -----------------
@@ -12,7 +12,8 @@ to the current session.
 4. Optimization tweaks
 5. Error counting for normal mode
 
-Alongside, I'll start working on compiling the python code (Used tool: Nuitka).
+Alongside, I'll start working on compiling
+the python code (Used tool: Nuitka).
 
 WHAT DOES IT HANDLE
 -------------------
