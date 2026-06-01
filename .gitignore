@@ -2,3 +2,4 @@ venv
 __pycache__
 paxer-path-parser.build
 paxer-path-parser.dist
+paxer-path-parser.onefile-build
