@@ -11,9 +11,10 @@ def HandleArguments():
     parser = argparse.ArgumentParser(
         prog="PAXER (PAth fiXER)",
     )
-    parser.add_argument("--path", "-p", default=getenv("PATH"), type=str)
-    parser.add_argument("--verbose", "-v", action="store_true")
-    parser.add_argument("--silent", "-s", action="store_true")
+    parser.add_argument("--path", "-p", default=getenv("PATH"), type=str, help="Give a custom path to handle")
+    parser.add_argument("--verbose", "-v", action="store_true", help="Show all hidden warnings and errors")
+    parser.add_argument("--silent", "-s", action="store_true", help="Runs the tool silently")
+    
     return parser.parse_args()
 
 def main():
