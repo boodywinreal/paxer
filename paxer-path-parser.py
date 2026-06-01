@@ -10,6 +10,7 @@ __version__ = VERSION
 helpString = ""
 
 def HandleArguments():
+    global helpString
     parser = argparse.ArgumentParser(
         prog="PAXER (PAth fiXER)",
         add_help=False
@@ -22,6 +23,7 @@ def HandleArguments():
     return parser.parse_args()
 
 def main():
+    global helpString
     data = HandleArguments()
 
     if data.help:
