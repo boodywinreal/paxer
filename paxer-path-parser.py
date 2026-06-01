@@ -7,6 +7,8 @@ import argparse
 
 __version__ = VERSION
 
+helpString = ""
+
 def HandleArguments():
     parser = argparse.ArgumentParser(
         prog="PAXER (PAth fiXER)",
@@ -14,11 +16,17 @@ def HandleArguments():
     parser.add_argument("--path", "-p", default=getenv("PATH"), type=str, help="Give a custom path to handle")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show all hidden warnings and errors")
     parser.add_argument("--silent", "-s", action="store_true", help="Runs the tool silently")
-    
+    parser.add_argument("--help", "-h", action="store_true", help="Show this menu and quit the program")
+    helpString = parser.format_help()
     return parser.parse_args()
 
 def main():
     data = HandleArguments()
+
+    if data.help:
+        pxl.stderr.write(helpString)
+        print(getenv("PATH"))
+        return
     
     if data.silent: pxl.logLevel = 0
     elif data.verbose: pxl.logLevel = 2
