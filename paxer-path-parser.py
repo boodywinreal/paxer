@@ -25,7 +25,7 @@ def main():
 
     if data.help:
         pxl.stderr.write(helpString)
-        print(getenv("PATH"))
+        print(getenv("PATH"), end="")
         return
     
     if data.silent: pxl.logLevel = 0
@@ -34,7 +34,7 @@ def main():
 
     if data.path is None:
         pxl.normalError("Path is None")
-        print(getenv("PATH"))
+        print(getenv("PATH"), end="")
         return
     
     pathList = data.path.split(":")
