@@ -1,8 +1,13 @@
-<pre>PAXER (PAth fiXER) V1.0-py
-===========================
+<pre>PAXER (PAth fiXER) V1.0-py (Long time no see)
+==================================================
 PAXER is a Unix utility to clean-up the $PATH variables from
 issues that affects the performance of the shell you are using,
 while applying to the current session.
+
+WHY THE UPDATE NAMED THIS
+-------------------------
+I have not been actively updating PAXER for a while because
+of my focus on other projects.
 
 !! WHAT IS NEW !!
 -----------------
@@ -26,4 +31,7 @@ WHAT DOES IT HANDLE
 WHAT IS NEXT
 ------------
 
-* Moving to C: For a maximum performance and zero overhead.</pre>
+* (DROPPED) Moving to C: For a maximum performance and zero overhead.
+* Moving to Dart: Dart is a really good programming language
+    I worked with, it has an easy learning curve and can also
+    compile applications.</pre>
